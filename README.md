@@ -1,7 +1,7 @@
-# A Multikernel Correntropy Approach for Invariant Extended Kalman Filtering
+# MKCIKF: Multikernel Correntropy Invariant Kalman Filter for Localization of Legged Robot
 
 ## Overview  
-This work proposes a multikernel correntropy invariant extended Kalman filter (MKCIEKF) that integrates multikernel correntropy with IEKF methodology to enhance robustness against heavy-tailed extreme noise. It is consistently better than the IEKF in a unicycle simulation and improves by 22.31\% and 25.46\% in the biped robot simulation and the quadruped experiment, demonstrating great potential for applications.
+This work proposes a multikernel correntropy invariant extended Kalman filter (MKCIEKF) that integrates multikernel correntropy with IEKF methodology to enhance robustness against heavy-tailed noise. Evaluations on biped robot simulations and quadruped robot experiments demonstrate that the proposed MKCIKF improves localization accuracy by approximately \textbf{38.1\%} and \textbf{18.3\%}, respectively, compared with IKF, while exhibiting enhanced robustness under complex and unstructured terrain conditions. 
 
 ---
 
@@ -14,17 +14,17 @@ This work proposes a multikernel correntropy invariant extended Kalman filter (M
 
 ### Unicycle Robot
 - **Objective**: Orientation and velocity estimation.
-- **Implementation**: Run "main.m" to compare the performance of EKF, IEKF, MCIEKF, and MKCIEKF on the unicycle robot.
+- **Implementation**: Run "main.m" to compare the performance of EKF, IKF, MCIKF, and MKCIKF on the unicycle robot.
 
 ### Biped Robot
 - **Objective**: Critical orientation, pose, and velocity estimation.
 - **Implementation**: Run "run_RIEKF_test.m" to test the algorithm on the Cassie-series biped robot. The algorithm fuses IMU information and kinematic data.
 
 ### Quadruped Robot
-- **Objective**: Performance comparison of IEKF, MCIEKF, and MKCIEKF.
+- **Objective**: Performance comparison of ESKF, IKF, MCIKF, and MKCIKF.
 - **Implementation**:
-  - **Simulation**: Use "iekf_mc_sim.m" for MCIEKF, "iekf_sim.m" for IEKF and "iekf_mck_sim.m" for MKCIEKF.
-  - **Real-world experiments**: Use "iekf_mck_real.m" for MKCIEKF and "iekf_real.m" for IEKF.
+  - **Simulation**: Use "iekf_mc_sim.m" for MCIKF, "iekf_sim.m" for IKF and "iekf_mck_sim.m" for MKCIKF.
+  - **Real-world experiments**: Use "iekf_mck_real.m" for MKCIKF and "iekf_real.m" for IKF.
     
 ### Image  
 Pre-generated figures in /image folder show.
